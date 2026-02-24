@@ -59,3 +59,19 @@ Now, set your environment variables and run the server:
 ```sh
 mcp-inspector go run .
 ```
+
+## Installing and running the project for production
+
+Install the project with the following command:
+
+```sh
+go install github.com/CdTgr/mongodb_go_mcp@latest
+```
+
+Now, you can freely connect your favourite MCP client to the server with the following execution command:
+
+```sh
+mongodb_go_mcp
+```
+
+> Note: Make sure to set the required environment variables before running the server.
