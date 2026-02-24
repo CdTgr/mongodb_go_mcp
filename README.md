@@ -1,5 +1,7 @@
 # MCP Server for MongoDB in Golang
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/CdTgr/mongodb_go_mcp.svg)](https://pkg.go.dev/github.com/CdTgr/mongodb_go_mcp)
+
 This project implements a MongoDB-compatible server in Golang, allowing clients to connect and interact with it as if it were a standard MongoDB server. The server supports basic CRUD operations, authentication, and other MongoDB features.
 
 ## Features
