@@ -1,4 +1,4 @@
-module mcp
+module mmongodb_go_mcp
 
 go 1.25.7
 
