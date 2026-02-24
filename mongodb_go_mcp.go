@@ -4,18 +4,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/CdTgr/mongodb_go_mcp/tools"
-
+	"github.com/CdTgr/mongodb_go_mcp/mcp/tools"
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 )
-
-type Input struct {
-	Name string `json:"name" jsonschema:"the name of the person to greet"`
-}
-
-type Output struct {
-	Greeting string `json:"greeting" jsonschema:"the greeting to tell to the user"`
-}
 
 func main() {
 	// Create a server with a single tool.
