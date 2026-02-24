@@ -11,7 +11,9 @@ import (
 )
 
 type Tool struct {
-	ReadOnly         bool
+	ReadOnly        bool
+	AllowAggregates bool
+
 	connectionString string
 	database         string
 	client           *mongo.Client
@@ -19,7 +21,8 @@ type Tool struct {
 
 func NewTool() *Tool {
 	tool := &Tool{
-		ReadOnly: false,
+		ReadOnly:        false,
+		AllowAggregates: false,
 	}
 
 	tool.validateArgs()
@@ -31,9 +34,14 @@ func (t *Tool) validateArgs() {
 	dbName := os.Getenv("DB_NAME")
 	dbURL := os.Getenv("DB_URL")
 	ReadOnly := strings.ToLower(strings.TrimSpace(os.Getenv("READ_ONLY")))
+	AllowAggregates := strings.ToLower(strings.TrimSpace(os.Getenv("ALLOW_AGGREGATES")))
 
 	if ReadOnly == "true" || ReadOnly == "1" {
 		t.ReadOnly = true
+	}
+
+	if AllowAggregates == "true" || AllowAggregates == "1" {
+		t.AllowAggregates = true
 	}
 
 	if dbURL == "" {

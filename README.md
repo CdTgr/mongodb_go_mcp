@@ -28,7 +28,8 @@ The server can be configured to run with the following environment variables:
 ```sh
 DB_URL=
 DB_NAME=
-READ_ONLY=
+READ_ONLY=false
+ALLOW_AGGREGATES=false
 ```
 
 | Variable | Description | Required | Default |
@@ -36,6 +37,7 @@ READ_ONLY=
 | `DB_URL` | The connection string for the MongoDB instance to connect to. | Yes | None |
 | `DB_NAME` | The name of the MongoDB database to use. If not provided, the server will require the database name to be specified in each query. | No | None |
 | `READ_ONLY` | If set to "true" or "1", the server will operate in read-only mode, disallowing any write operations. | No | false |
+| `ALLOW_AGGREGATES` | If set to "true" or "1", the server will allow aggregate operations. | No | false |
 
 
 ## Usage

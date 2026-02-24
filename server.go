@@ -42,6 +42,11 @@ func main() {
 		coreTools.NewMongoDBFindOneAndDeleteTool().AttachTool(server)
 	}
 
+	if coreTools.AllowAggregates {
+		// Aggregate tool
+		coreTools.NewMongoDBAggregateTool().AttachTool(server)
+	}
+
 	// Run the server over stdin/stdout, until the client disconnects.
 	if err := server.Run(context.Background(), &mcp.StdioTransport{}); err != nil {
 		log.Fatal(err)
