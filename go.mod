@@ -1,4 +1,4 @@
-module mongodb_go_mcp
+module github.com/CdTgr/mmongodb_go_mcp
 
 go 1.25.7
 

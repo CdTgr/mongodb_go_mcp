@@ -3,7 +3,8 @@ package main
 import (
 	"context"
 	"log"
-	"mongodb_go_mcp/tools"
+
+	"github.com/CdTgr/mongodb_go_mcp/tools"
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 )
