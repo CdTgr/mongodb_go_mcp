@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/CdTgr/mongodb_go_mcp/tools"
+	"mongodb_go_mcp/tools"
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 )
