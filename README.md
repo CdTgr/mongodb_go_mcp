@@ -69,7 +69,7 @@ mcp-inspector go run .
 Install the project with the following command:
 
 ```sh
-go install github.com/CdTgr/mongodb_go_mcp@latest
+go install github.com/CdTgr/mongodb_go_mcp/cmd/mongodb-go-mcp@latest
 ```
 
 Now, you can freely connect your favourite MCP client to the server with the following execution command:

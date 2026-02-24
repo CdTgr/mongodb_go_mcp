@@ -1,4 +1,4 @@
-package main
+package mongodb_go_mcp
 
 import (
 	"context"
@@ -8,7 +8,8 @@ import (
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 )
 
-func main() {
+func RunServer() {
+
 	// Create a server with a single tool.
 	server := mcp.NewServer(&mcp.Implementation{Name: "MongoDB MCP", Version: "v1.0.0"}, nil)
 
